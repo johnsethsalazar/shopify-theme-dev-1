@@ -1,11 +1,12 @@
 <html>
   <head>
- {%- render 'ecom_header' -%}
+    {%- render 'ecom_header' -%}
     {{ content_for_header }}
-  {% include 'pagefly-app-header' %}</head>
+    {% include 'pagefly-app-header' %}</head>
   <body>
+    {% section 'announcement-bar' %}
     <main id="main" role="main">
       {{ content_for_layout }}
     </main>
-  {%- render "ecom_footer"-%}</body>
+    {%- render "ecom_footer" - %}</body>
 </html>
