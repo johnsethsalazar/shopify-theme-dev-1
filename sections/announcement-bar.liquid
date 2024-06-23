@@ -15,10 +15,22 @@
             loading="lazy"
             src="{{ 'a.png' | asset_url }}" />
         {% endif %}
+
+        {% if section.settings.image2 != blank %}
+          <img
+            width="40"
+            height="40"
+            loading="lazy"
+            src="{{ section.settings.image2 | image_url }}" />
+        {% else %}
+          <img
+            width="40"
+            height="40"
+            loading="lazy"
+            src="{{ 'b.png' | asset_url }}" />
+        {% endif %}
       </div>
-      <div class="announcement-bar-right-section">
-        <!-- Content for the right section goes here -->
-      </div>
+      <div class="announcement-bar-right-section"></div>
     </div>
   </section>
 {% endif %}
@@ -34,7 +46,7 @@
         "default": true
       }, {
         "type": "image_picker",
-        "id": "image",
+        "id": "image2",
         "label": "Pick Image",
         "info": "png recommended format"
       }
