@@ -35,6 +35,13 @@
   </section>
 {% endif %}
 
+<style>
+  .announcement-bar {
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+  }
+</style>
+
 {% schema %}
   {
     "name": "Announcement Bar",
@@ -49,6 +56,16 @@
         "id": "image2",
         "label": "Pick Image",
         "info": "png recommended format"
+      }, {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#f4f4f4"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#000000"
       }
     ],
     "presets": []
