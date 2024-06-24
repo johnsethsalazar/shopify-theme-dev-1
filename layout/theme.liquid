@@ -2,7 +2,9 @@
   <head>
     {%- render 'ecom_header' -%}
     {{ content_for_header }}
-    {% include 'pagefly-app-header' %}</head>
+    {% include 'pagefly-app-header' %}
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+  </head>
   <body>
     {% section 'announcement-bar' %}
     <main id="main" role="main">
