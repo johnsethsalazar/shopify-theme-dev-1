@@ -8,6 +8,13 @@
         src="{{'nike.png' |  asset_url}}" />
     </a>
   </div>
-  <div></div>
+
+  <div>
+    <ul class="middle-nav-bar">
+      {% for link in linklists['main-menu'].links %}
+        <li>{{ link.title | link_to: link.url }}</li>
+      {% endfor %}
+    </ul>
+  </div>
   <div></div>
 </header>
