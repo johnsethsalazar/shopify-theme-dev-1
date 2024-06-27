@@ -1,9 +1,45 @@
-<section>Hello World</section>
+<section>
+  <div class="banner-wrapper">
+    <div class="slide-text" id="text1">Members: Free Shipping!</div>
+    <div class="slide-text" id="text2">Save Up to 40%</div>
+    <div class="slide-text" id="text3">Get Your Gear Faster</div>
+  </div>
+</section>
+
+<style>
+  .banner-wrapper {
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+  }
+
+  .slide-text {
+    position: absolute;
+    top: 155px;
+    left: -150%;
+    transform: translate(0, -50%);
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+    transition: left 0.5 ease-in-out;
+  }
+</style>
 
 {% schema %}
   {
     "name": "Banner",
-    "settings": [],
+    "settings": [
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#f4f4f4"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#000000"
+      }
+    ],
     "presets": [
       {
         "name": "banner"
