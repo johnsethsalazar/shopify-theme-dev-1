@@ -1,5 +1,19 @@
 <section class="more-info">
-  <div class="more-info-wrapper"></div>
+  <div class="more-info-wrapper">
+    {% if section.settings.text != blank %}
+      <h1>THE RESOLUTION STARTER PACK</h1>
+    {% else %}
+      <h1>{{ section.settings.text }}</h1>
+    {% endif %}
+
+    {% if section.settings.text2 != blank %}
+      <p>THE RESOLUTION STARTER PACK</p>
+    {% else %}
+      <p>{{ section.settings.text2 }}</p>
+    {% endif %}
+
+    <button>Shop Now</button>
+  </div>
 </section>
 
 {% schema %}
