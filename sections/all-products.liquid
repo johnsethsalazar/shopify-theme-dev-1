@@ -3,6 +3,13 @@
   <div class="product-container">
     <div class="all-products-wrapper">
       {% for product in collections['all'].products %}
+        <div class="product-card">
+          <img
+            width="300"
+            height="300"
+            loading="lazy"
+            src="{{ product.featured_image | image_url }}">
+        </div>
         <h3>{{ product.title | link_to: product.url }}</h3>
       {% endfor %}
     </div>
