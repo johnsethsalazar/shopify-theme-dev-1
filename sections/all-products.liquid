@@ -9,12 +9,51 @@
             height="300"
             loading="lazy"
             src="{{ product.featured_image | image_url }}">
+          <h3>{{ product.title | link_to: product.url }}</h3>
         </div>
-        <h3>{{ product.title | link_to: product.url }}</h3>
       {% endfor %}
     </div>
   </div>
 </section>
+
+<style>
+  .all-products {
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+    padding: 10px;
+
+  }
+
+  .all-products-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+    /* Add smooth transition effect */
+
+  }
+  .product-container {
+    position: relative;
+    overflow-x: scroll;
+  }
+
+  .product-card {
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .product-card h3 a {
+    color: black;
+    text-decoration: none
+  }
+
+  .product-card a:hover {
+    text-decoration: underline;
+  }
+</style>
 
 {% schema %}
   {
