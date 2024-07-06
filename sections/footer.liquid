@@ -79,6 +79,26 @@
   </div>
 </footer>
 
+<style>
+  .footer-main {
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+    padding: 10px;
+  }
+  .footer-sec-1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-sec-2 {
+    display: flex;
+  }
+  .footer-sec-2 p {
+    padding: 10px
+  }
+</style>
+
 {% schema %}
   {
     "name": "Footer",
